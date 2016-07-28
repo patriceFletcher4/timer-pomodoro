@@ -6,17 +6,17 @@ html {
   padding-top: 70px;
 }
 #timer {
-  font-size: 300px;
+  font-size: 150px;
   text-align: center;
 }
 
 #start {
-  font-size: 70px;
+  font-size: 50px;
   color: white;
 }
 
 #pause {
-  font-size: 70px;
+  font-size: 15px;
   color: white;
 }
 
