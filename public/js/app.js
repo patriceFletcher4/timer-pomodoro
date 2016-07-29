@@ -9,8 +9,8 @@ $(document).ready(function(){
 
   start.on('click', startCountdown);
   breakBtn.on('click', takeABreak);
-  pause.on('click', pauseCountdown);
-  rest.on('click', resetTimer);
+  pauseBtn.on('click', pauseButtonClicked);
+  resetBtn.on('click', resetTimer);
 
   function takeABreak(){
     minutes.text('05');
@@ -18,15 +18,24 @@ $(document).ready(function(){
     startCountdown();
   }
 
-  function pauseCountdown(){
-  if( pause === 0){
-    pause = 1;
-    clearInterval(countdown);
-    pauseBtn.text('Resume');
+  function pauseButtonClicked(){
+      if (pause === 0){
+        pause = 1;
+        clearInterval(countdown);
+      } else {
+        pause = 0;
+        pauseBtn.text('|| Pause');
+        startCountdown();
+      };
+
+    };
+
+
 
     function resetTimer(){
       minutes.text('25');
       seconds.text('00');
+    }
 
   function startCountdown(){
     var countdown = setInterval(function(){
